@@ -16,8 +16,8 @@ description:      "สมุดจดบันทึก เรื่องรา
 keywords:         [note, computer, programming, script, knowledge, coding, technique, collection, glossary, data, infomation, internet, web]
 url:              http://dev.mildronize.com
 # for dev
-# url:              http://127.0.0.1:4000
-baseurl:          th/
+#url:              http://127.0.0.1:4000
+baseurl:          /th
 image_url:        public/images/
 comment:          true
 
