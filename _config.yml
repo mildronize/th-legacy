@@ -20,6 +20,7 @@ url:              http://dev.mildronize.com
 baseurl:          /th
 image_url:        public/images/
 comment:          true
+changelang:       English version
 
 author:
   codename:       mildronize
