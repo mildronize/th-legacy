@@ -17,7 +17,7 @@ keywords:         [note, computer, programming, script, knowledge, coding, techn
 url:              http://mildronize.github.io
 # for dev
 # url:              http://127.0.0.1:4000
-baseurl:          th/
+baseurl:          /
 image_url:        public/images/
 comment:          true
 
