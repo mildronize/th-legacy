@@ -14,7 +14,7 @@ title:            Mildronize's blog
 tagline:          'mildronize-blog'
 description:      "สมุดจดบันทึก เรื่องราวต่างๆ ที่น่าสนใจ"
 keywords:         [note, computer, programming, script, knowledge, coding, technique, collection, glossary, data, infomation, internet, web]
-url:              http://mildronize.github.io
+url:              http://dev.mildronize.com/th/
 # for dev
 # url:              http://127.0.0.1:4000
 baseurl:          /
