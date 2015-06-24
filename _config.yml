@@ -12,7 +12,7 @@ relative_permalinks: true
 # Setup
 title:            Mildronize's blog
 tagline:          'mildronize-blog'
-description:      "My notes and interesting things"
+description:      "สมุดจดบันทึก เรื่องราวต่างๆ ที่น่าสนใจ"
 keywords:         [note, computer, programming, script, knowledge, coding, technique, collection, glossary, data, infomation, internet, web]
 url:              http://mildronize.github.io
 # for dev
