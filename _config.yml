@@ -14,10 +14,10 @@ title:            Mildronize's blog
 tagline:          'mildronize-blog'
 description:      "สมุดจดบันทึก เรื่องราวต่างๆ ที่น่าสนใจ"
 keywords:         [note, computer, programming, script, knowledge, coding, technique, collection, glossary, data, infomation, internet, web]
-url:              http://dev.mildronize.com/th/
+url:              http://dev.mildronize.com
 # for dev
 # url:              http://127.0.0.1:4000
-baseurl:          /
+baseurl:          th/
 image_url:        public/images/
 comment:          true
 
