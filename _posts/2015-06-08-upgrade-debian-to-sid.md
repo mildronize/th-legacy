@@ -1,12 +1,14 @@
 ---
 layout: post
-title: How to upgrade Debian to SID
-description: Instruction for upgrading debian from stable to SID, sudo command setup, installing non-free packages(non open source)
+title: มาอัพเดท Debian จากเวอร์ชั่น stable มาเป็น sid กันเถอะ
+description: ขั้นตอนการอัพเกรดระบบ Debian จาก stable sid, การทำให้ user สามารถใช้สิทธิผู้ดูแลระบบได้(root) และการติดตั้ง non-free packages(non open source)
 tags: ['upgrade', 'debian', 'linux', 'how-to', 'font-thai', 'firmware-linux', 'sudo', 'update', 'sorces.list', 'non-free', 'archive-area']
 category: articles
 ---
 
-**Optional:** Add `sudo` into your user
+โดยปกติแล้ว เวลาลง Debian ใหม่ๆ จะไม่สามารถใช้ คำสั่ง sudo ได้ ไม่เหมือนกับ Ubuntu ที่ตอนติดตั้งจะให้ user แรกที่สร้างตอนติดตั้งสามารถใช้ คำสั่ง sudo ได้เลย 
+
+ดังนั้น เพื่อให้ user ของเราเองมีสิทธิเทียบเท่าผู้ดูแลระบบ(system administrators ) เราจึงต้องลง package ชื่อว่า sudo และใช้สิทธิผู้ดูแลระบบอนุญาตให้ user ของเรามีสิทธิเทียบเท่าผู้ดูแลระบบ เพราะในบางคำสั่งจำเป็นต้องใช้สิทธิ ผู้ดูแลระบบในการทำงาน เช่น การติดตั้ง โปรแกรม (หรือ package) โดยใช้คำสั่งด้านล่างนี้ 
 
 ```
 su
@@ -15,8 +17,11 @@ usermod -a -G sudo [USERNAME]
 exit
 ```
 
-1. Replace the belowing text into `/etc/apt/sorces.list` with your favorite editor. In my case I use 
-`sudo vi /etc/apt/sorces.list`
+> [sudo](https://wiki.debian.org/sudo) คือ คำสั่งที่ให้ ผู้ดูแลระบบ อนุญาตให้่บาง user สามารถใช้คำสั่งที่ได้สิทธิเทียบเท่าผู้ดูแลระบบได้
+
+## ขั้นตอน
+
+1. ให้คัดลอกข้อความด้านล่างนี้แทนที่ ของเดิมไปเลย โดยไปไว้ที่ `/etc/apt/sorces.list` กับโปรแกรมแก้ไขข้อความตัวไหนก็ได้ที่คุณชอบ โดยในที่นี้ผมจะใช้ vi `sudo vi /etc/apt/sorces.list` และคัดลอกข้อมูลด้านล่างลงไปแล้วก็บันทึก
 
     ```bash
     deb http://ftp.th.debian.org/debian/ sid main contrib non-free
@@ -33,31 +38,34 @@ exit
     
     > Note: Replace `http://ftp.th.debian.org/debian/` to your nearest repository 
     
-2. Update a list of repositories
+2. ทำการอัพเดทรายการ package ทั้งหมดที่อยู่ใน repository ที่เราใส่ไว้ในข้อที่ 1
 
     ```bash
     sudo aptitude update
     ```
     
-2. Upgrade your debian version into sid version
+2. จากนั้นทำการอัพเกรดระบบ Debain ไปยัง sid (หรือ unstable)
 
     ```bash
     sudo aptitude dist-upgrade
     ```
-3. After it finished, reboot system
+3. เมื่อเสร็จสิ้น สั่งรีบูตเครื่อง
 
     ```bash
     sudo reboot
     ```
 
-**Optional:** 
+## เพิ่มเติม จะลงก็ได้ไม่ลงก็ได้:
 
-- For installing firmware for various drivers in consist of [non-free](https://www.debian.org/doc/debian-policy/ch-archive.html#s-non-free) packages or drivers using: 
+- การลง firmware บางตัวที่มี [non-free](https://www.debian.org/doc/debian-policy/ch-archive.html#s-non-free) อยู่ด้วยเช่น drivers เพื่อให้สามารถใช้ driver บางอันได้ 
+
+> สรุปคือลงๆ ไปเถอะ คือบาง driver เช่น `driver การ์ดจอ` มันไม่ใช่ open source แต่เราสามารถใช้งานได้ฟรี ดังนั้นลงๆ ตัวนี้ไปเถอะ จะได้มี driver ใช้
 
 ```
 sudo aptitude install firmware-linux
 ```
-- For installing some thai font: 
+
+- ถ้าลง Debian ใหม่้ๆ แล้วจะไม่มีภาษาไทยมาให้ ตัวอักษรจะเป็นภาษาที่อ่านไม่ออก ดังนั้นควรจะลง `xfonts-thai` ด้วย จะได้อ่านภาษาไทยได้ สรุปคือลงๆ ไปเถอะถ้าเป็นคนไทย
 
 ```
 sudo aptitude install xfonts-thai
