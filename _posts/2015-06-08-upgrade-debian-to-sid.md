@@ -10,18 +10,18 @@ category: articles
 
 ดังนั้น เพื่อให้ user ของเราเองมีสิทธิเทียบเท่าผู้ดูแลระบบ(system administrators ) เราจึงต้องลง package ชื่อว่า sudo และใช้สิทธิผู้ดูแลระบบอนุญาตให้ user ของเรามีสิทธิเทียบเท่าผู้ดูแลระบบ เพราะในบางคำสั่งจำเป็นต้องใช้สิทธิ ผู้ดูแลระบบในการทำงาน เช่น การติดตั้ง โปรแกรม (หรือ package) โดยใช้คำสั่งด้านล่างนี้ 
 
-```
-su
-aptitude install sudo
-usermod -a -G sudo [USERNAME]
-exit
+```bash
+$ su
+# aptitude install sudo
+# usermod -a -G sudo [USERNAME]
+# exit
 ```
 
 > [sudo](https://wiki.debian.org/sudo) คือ คำสั่งที่ให้ ผู้ดูแลระบบ อนุญาตให้่บาง user สามารถใช้คำสั่งที่ได้สิทธิเทียบเท่าผู้ดูแลระบบได้
 
 ## ขั้นตอน
 
-1. ให้คัดลอกข้อความด้านล่างนี้แทนที่ ของเดิมไปเลย โดยไปไว้ที่ `/etc/apt/sorces.list` กับโปรแกรมแก้ไขข้อความตัวไหนก็ได้ที่คุณชอบ โดยในที่นี้ผมจะใช้ vi `sudo vi /etc/apt/sorces.list` และคัดลอกข้อมูลด้านล่างลงไปแล้วก็บันทึก
+1. ให้คัดลอกข้อความด้านล่างนี้แทนที่ ของเดิมไปเลย โดยไปไว้ที่ `/etc/apt/sorces.list` กับโปรแกรมแก้ไขข้อความตัวไหนก็ได้ที่คุณชอบ โดยในที่นี้ผมจะใช้ vi `$ sudo vi /etc/apt/sorces.list` และคัดลอกข้อมูลด้านล่างลงไปแล้วก็บันทึก
 
     ```bash
     deb http://ftp.th.debian.org/debian/ sid main contrib non-free
@@ -41,34 +41,34 @@ exit
 2. ทำการอัพเดทรายการ package ทั้งหมดที่อยู่ใน repository ที่เราใส่ไว้ในข้อที่ 1
 
     ```bash
-    sudo aptitude update
+    $ sudo aptitude update
     ```
     
 2. จากนั้นทำการอัพเกรดระบบ Debain ไปยัง sid (หรือ unstable)
 
     ```bash
-    sudo aptitude dist-upgrade
+    $ sudo aptitude dist-upgrade
     ```
 3. เมื่อเสร็จสิ้น สั่งรีบูตเครื่อง
 
     ```bash
-    sudo reboot
+    $ sudo reboot
     ```
 
 ## เพิ่มเติม จะลงก็ได้ไม่ลงก็ได้:
 
 - การลง firmware บางตัวที่มี [non-free](https://www.debian.org/doc/debian-policy/ch-archive.html#s-non-free) อยู่ด้วยเช่น drivers เพื่อให้สามารถใช้ driver บางอันได้ 
 
-> สรุปคือลงๆ ไปเถอะ คือบาง driver เช่น `driver การ์ดจอ` มันไม่ใช่ open source แต่เราสามารถใช้งานได้ฟรี ดังนั้นลงๆ ตัวนี้ไปเถอะ จะได้มี driver ใช้
+    > สรุปคือลงๆ ไปเถอะ คือบาง driver เช่น `driver การ์ดจอ` มันไม่ใช่ open source แต่เราสามารถใช้งานได้ฟรี ดังนั้นลงๆ ตัวนี้ไปเถอะ จะได้มี driver ใช้
 
-```
-sudo aptitude install firmware-linux
-```
+    ```
+    $ sudo aptitude install firmware-linux
+    ```
 
 - ถ้าลง Debian ใหม่้ๆ แล้วจะไม่มีภาษาไทยมาให้ ตัวอักษรจะเป็นภาษาที่อ่านไม่ออก ดังนั้นควรจะลง `xfonts-thai` ด้วย จะได้อ่านภาษาไทยได้ สรุปคือลงๆ ไปเถอะถ้าเป็นคนไทย
 
-```
-sudo aptitude install xfonts-thai
-```
+    ```
+    $ sudo aptitude install xfonts-thai
+    ```
 
 
