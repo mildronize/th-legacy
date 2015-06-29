@@ -17,7 +17,7 @@ category: articles
 - [ทำความเข้าใจเกี่ยวแต่ละรุ่นของ Debian]({{ site.baseurl}}{% post_url 2015-06-25-what-is-debian-version-sid-testing-stable %})
 - [อัพเกรด Debian จาก stable เป็น sid]({{ site.baseurl}}{% post_url 2015-06-08-upgrade-debian-to-sid %})
 - **หัวข้อที่สำคัญ**: เราจะแก้ปัญหาอย่างไรที่พบระหว่างการติดตั้ง packages โดยที่สามารถเรียนรู้จากกรณีศึกษาด้านล่างนี้
-    - [กรณีศึกษาที่ 1: การติดตั้ง Google Chrome บน Debian (ภาษาอังกฤษ)]({{ site.baseurl}}{% post_url 2015-06-22-how-to-install-google-chrome-on-debian %})
+    - [กรณีศึกษาที่ 1: การติดตั้ง Google Chrome บน Debian]({{ site.baseurl}}{% post_url 2015-06-22-how-to-install-google-chrome-on-debian %})
     - กรณีศึกษาที่ 2: การติดตั้ง Bracket บน Debian
 - บำรุงรักษาและพยายามที่จะเรียนรู้สิ่งใหม่ๆ ตลอดเวลา
 
