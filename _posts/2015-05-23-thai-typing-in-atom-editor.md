@@ -8,8 +8,12 @@ category: articles
 tags: [atom, editor, unicode, cursor, problem, positioning, multi-byte, incorrect, character, thai]
 language: th
 ---
+
+> อัพเดท 2015-07-05: [Atom Editor ออกรุ่น 1.0 แล้ว](https://www.blognone.com/node/69792) แต่ก็ยังไม่สามารถใช้งานภาษาไทยได้
  
 บทความนี้เป็น บทความแรกที่ผมเขียนเป็นภาษาไทย จริงๆ แล้วจะพยายามเขียนทั้งสอง ภาษา (ไทยและอังกฤษ) เพื่อเป็นการฝึกฝนเรื่องภาษาของตนเอง และเพื่อที่จะทดสอบการเขียนบทความเป็นภาษาไทย บน Jekyll ก่อนที่จะเปลี่ยนเว็บบล็อคนี้เป็น [แบบหลายภาษา (multi language)]({{site.baseurl}}notes/my-blog-dev/#next-plans)
+
+> หมายเหตุ: ถ้าใครยังไม่รู้จัก Atom Editor ลองอ่าน[บทความรีวิวจาก Blognone ดูนะครับ](https://www.blognone.com/node/56176)
 
 ## ปัญหาที่พบ
 ปัญหาที่ผมพบในการพิมพ์ภาษาไทยบน [Atom Editor](https://atom.io) คือ cursor ที่แสดงผลขณะกำลังพิมพ์นั้นไม่ตรงกับ สิ่งที่แสดงผลจริงๆ 
