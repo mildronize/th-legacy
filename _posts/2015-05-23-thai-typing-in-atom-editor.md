@@ -9,7 +9,7 @@ tags: [atom, editor, unicode, cursor, problem, positioning, multi-byte, incorrec
 language: th
 ---
 
-> อัพเดท 2015-07-05: [Atom Editor ออกรุ่น 1.0 แล้ว](https://www.blognone.com/node/69792) แต่ก็ยังไม่สามารถใช้งานภาษาไทยได้
+> อัพเดท 2015-07-05: [Atom Editor ออกรุ่น 1.0 แล้ว](https://www.blognone.com/node/69792) ผมได้ทดสอบแล้วแต่ก็ยังไม่สามารถใช้งานภาษาไทยได้
  
 บทความนี้เป็น บทความแรกที่ผมเขียนเป็นภาษาไทย จริงๆ แล้วจะพยายามเขียนทั้งสอง ภาษา (ไทยและอังกฤษ) เพื่อเป็นการฝึกฝนเรื่องภาษาของตนเอง และเพื่อที่จะทดสอบการเขียนบทความเป็นภาษาไทย บน Jekyll ก่อนที่จะเปลี่ยนเว็บบล็อคนี้เป็น [แบบหลายภาษา (multi language)]({{site.baseurl}}notes/my-blog-dev/#next-plans)
 
