@@ -62,6 +62,7 @@ featured: true
 
 ## Visual Mode
 เลือกข้อความทีละหลายๆ บรรทัด
+
 1. **Enther visual mode**: `v`
 2. **กดปุ่มเลื่อน Cursor เพื่อคลุมดำข้อความ**: `h`,`j`,`k`,`l`
 
