@@ -66,7 +66,9 @@ featured: true
 1. **Enther visual mode**: `v`
 2. **กดปุ่มเลื่อน Cursor เพื่อคลุมดำข้อความ**: `h`,`j`,`k`,`l`
 
-
+## Vim Theme
+- [Monokai](https://github.com/sickill/vim-monokai)
+- [Solarized](https://github.com/altercation/vim-colors-solarized)
 
 ------------
 
@@ -123,3 +125,39 @@ Ref:
 - <http://dev.im-bot.com/vim/>
 - [Janus](https://github.com/carlhuda/janus
 - [TMUX](https://tmux.github.io/)
+
+
+-----------
+
+# Troubleshooting
+
+## ปัญหา background ของ Vim เมื่อใช้บน TMUX
+A: <http://stackoverflow.com/questions/30385304/how-do-i-stop-my-vim-background-from-being-transparent-in-tmux-where-there-is-no>
+
+## Reloading tmux config
+- บน tmux กด `Ctrl+a` `:` แล้วก็พิมพ์
+
+```
+:source-file ~/.tmux.conf
+```
+
+- หรือบน bash shell
+
+```bash
+$ tmux source-file ~/.tmux.conf
+```
+From <http://blog.sanctum.geek.nz/reloading-tmux-config/>
+
+## Reloading zsh config
+
+```
+source ~/.zshrc
+```
+
+หรือแบบนี้
+
+```
+. ~/.zshrc
+```
+
+From <http://www.geekmind.net/2011/08/how-to-reload-your-zshrc.html>
