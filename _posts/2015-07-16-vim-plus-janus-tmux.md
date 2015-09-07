@@ -66,6 +66,8 @@ featured: true
 1. **Enther visual mode**: `v`
 2. **กดปุ่มเลื่อน Cursor เพื่อคลุมดำข้อความ**: `h`,`j`,`k`,`l`
 
+วางจาก หน้าเว็บมันจะ auto indent ให้ `F4`
+
 ## Vim Theme
 - [Monokai](https://github.com/sickill/vim-monokai)
 - [Solarized](https://github.com/altercation/vim-colors-solarized)
